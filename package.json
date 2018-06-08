@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {}
+}
