@@ -22,7 +22,7 @@ Then install all necessary libraries and modules within the project with `dotnet
 You need the same default behavior of the MyBroker Web App:
 - Layout page
 - Two pages with navigation
-- Logic to add a new stock
+- Logic to add a new stock (Get form data with validation and redirect to homepage)
 - Load stock data from Web-Service (see below)
 - Show stock data on dashboard
 - Update stock data on a reload-button click

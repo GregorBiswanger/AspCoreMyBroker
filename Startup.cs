@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyBroker.Middleware;
+using MyBroker.Models;
 
 namespace MyBroker
 {
@@ -29,6 +30,7 @@ namespace MyBroker
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IStockDepot, MemoryStockDepot>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
