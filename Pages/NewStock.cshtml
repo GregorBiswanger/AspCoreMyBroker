@@ -1,0 +1,16 @@
+﻿@page
+@model MyBroker.Pages.NewStockModel
+@{
+    ViewData["Title"] = "Neue Aktie hinzufügen";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div id="newStock" class="row">
+    <div class="input-field col s8 m6">
+        <input id="name" type="text" class="validate">
+        <label class="active" for="name">Name</label>
+    </div>
+    <div class="col s4">
+        <button id="addStock" class="btn waves-effect waves-light blue darken-1" style="margin-top: 20px;">OK</button>
+    </div>
+</div>

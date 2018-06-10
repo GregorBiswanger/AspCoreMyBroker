@@ -1,39 +1,26 @@
 ﻿@page
 @model IndexModel
-@{ 
+@{
     ViewBag.Title = "MyBroker ASP.NET Core Edition";
 }
 
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <div id="newStock" class="row">
-            <div class="input-field col s8 m6">
-                <input id="name" type="text" class="validate">
-                <label class="active" for="name">Name</label>
-            </div>
-            <div class="col s4">
-                <button id="addStock" class="btn waves-effect waves-light blue darken-1" style="margin-top: 20px;">OK</button>
-            </div>
-        </div>
-        <div id="stocks" class="row">
+<div id="stocks" class="row">
 
-            <div id="cardTemplate" class="col s12 m6">
-                <div class="card hoverable blue darken-1">
-                    <div class="card-content white-text">
-                        <span class="card-title" style="margin-bottom: 0px;">Ticker</span>
-                        <div id="DateTime">Last Trade Time</div>
+    <div id="cardTemplate" class="col s12 m6">
+        <div class="card hoverable blue darken-1">
+            <div class="card-content white-text">
+                <span class="card-title" style="margin-bottom: 0px;">Ticker</span>
+                <div id="DateTime">Last Trade Time</div>
 
-                        <div id="LastTradePrice" class="col s6" style="padding-left: 0;font-size: 22px;">Price</div>
-                        <div id="Change" class="col offset-s2 s2">Change</div>
-                        <div id="ChangeinPercent" class="col s2">Change Percentage</div>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Merken</a>
-                        <a href="#">Kaufen</a>
-                    </div>
-                </div>
+                <div id="LastTradePrice" class="col s6" style="padding-left: 0;font-size: 22px;">Price</div>
+                <div id="Change" class="col offset-s2 s2">Change</div>
+                <div id="ChangeinPercent" class="col s2">Change Percentage</div>
             </div>
-
+            <div class="card-action">
+                <a href="#">Merken</a>
+                <a href="#">Kaufen</a>
+            </div>
         </div>
     </div>
+
 </div>
