@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MyBroker.Models
+namespace MyBroker.Data
 {
     public interface IStockDepot
     {

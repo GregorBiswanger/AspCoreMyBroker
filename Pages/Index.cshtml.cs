@@ -1,17 +1,32 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyBroker.Data;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyBroker.Pages
 {
     public class IndexModel : PageModel
     {
-        public void OnGet()
-        {
+        public List<Stock> Stocks { get; set; } = new List<Stock>();
 
+        private IStockDepot _stockDepot;
+        private IStockRepository _stockRepository;
+
+        public IndexModel(IStockDepot stockDepot, IStockRepository stockRepository)
+        {
+            _stockDepot = stockDepot;
+            _stockRepository = stockRepository;
+        }
+
+        public async Task OnGet()
+        {
+            string stocknames = string.Join('/', _stockDepot.GetUserStocknames());
+
+            if (!string.IsNullOrEmpty(stocknames))
+            {
+                Stocks = await _stockRepository.GetAsync(stocknames, CancellationToken.None);
+            }
         }
     }
 }

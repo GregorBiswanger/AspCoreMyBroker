@@ -6,21 +6,34 @@
 
 <div id="stocks" class="row">
 
-    <div id="cardTemplate" class="col s12 m6">
-        <div class="card hoverable blue darken-1">
-            <div class="card-content white-text">
-                <span class="card-title" style="margin-bottom: 0px;">Ticker</span>
-                <div id="DateTime">Last Trade Time</div>
+    @foreach (var stock in Model.Stocks)
+    {
+        <div class="col s12 m6">
+            <div class="card hoverable blue darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title" style="margin-bottom: 0px;">@stock.Name (@stock.Symbol)</span>
+                    <div id="DateTime">@stock.LastTradeDate - @stock.LastTradeTime</div>
 
-                <div id="LastTradePrice" class="col s6" style="padding-left: 0;font-size: 22px;">Price</div>
-                <div id="Change" class="col offset-s2 s2">Change</div>
-                <div id="ChangeinPercent" class="col s2">Change Percentage</div>
-            </div>
-            <div class="card-action">
-                <a href="#">Merken</a>
-                <a href="#">Kaufen</a>
+                    <div id="LastTradePrice" class="col s6" style="padding-left: 0;font-size: 22px;">@stock.LastTradePriceOnly @stock.Currency</div>
+
+                    @if (stock.Change.Contains("+"))
+                    {
+                        <div id="Change" class="col offset-s2 s2 green">@stock.Change</div>
+                    }
+                    else
+                    {
+                        <div id="Change" class="col offset-s2 s2 red">@stock.Change</div>
+                    }
+
+
+                    <div id="ChangeinPercent" class="col s2">@stock.ChangeinPercent</div>
+                </div>
+                <div class="card-action">
+                    <a href="#">Merken</a>
+                    <a href="#">Kaufen</a>
+                </div>
             </div>
         </div>
-    </div>
+    }
 
 </div>

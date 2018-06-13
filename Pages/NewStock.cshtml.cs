@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MyBroker.Models;
+using MyBroker.Data;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyBroker.Pages
