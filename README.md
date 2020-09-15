@@ -8,7 +8,7 @@ https://gregorbiswanger.github.io/MyBroker/
 
 ## Preperations for the start
 The following is required for the project:    
-- [ASP.NET Core 2.1 SDK](http://www.dot.net "www.dot.net") (runs on Windows, Mac and Linux)  
+- [ASP.NET Core 3.1 SDK](http://www.dot.net "www.dot.net") (runs on Windows, Mac and Linux)  
 - [Node.js](http://www.nodejs.org "www.nodejs.org") (runs on Windows, Mac and Linux)   
 - [Visual Studio Code](http://code.visualstudio.com "http://code.visualstudio.com") (runs on Windows, Mac and Linux)  
   
